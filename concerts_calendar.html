@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concert Calendar</title>
+  <style>
+    /* ── Reset & base ─────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0d0d14;
+      --surface:  #15151f;
+      --surface2: #1c1c29;
+      --border:   #2a2a3e;
+      --text:     #e8e8f4;
+      --muted:    #7070a0;
+      --radius:   12px;
+      --font:     'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    /* ── Header ──────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,13,20,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .site-title span {
+      opacity: 0.4;
+      font-weight: 400;
+    }
+
+    .stats {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* ── Filters ─────────────────────────────────────────── */
+    .filters {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+    }
+
+    .filters-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .filter-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      min-width: 60px;
+    }
+
+    .legend-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      border: 1.5px solid #555;
+      background: transparent;
+      color: var(--text);
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+      font-family: var(--font);
+    }
+
+    .legend-btn:hover { opacity: 0.85; transform: translateY(-1px); }
+    .legend-btn.inactive { opacity: 0.25; }
+
+    .btn-all {
+      border-color: var(--border) !important;
+      color: var(--muted) !important;
+    }
+
+    /* ── Main ────────────────────────────────────────────── */
+    .main {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 4rem;
+    }
+
+    /* ── Month group ─────────────────────────────────────── */
+    .month-group {
+      margin-bottom: 2.5rem;
+    }
+
+    .month-heading {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 0.75rem;
+    }
+
+    /* ── Concert card ────────────────────────────────────── */
+    .card {
+      --accent: #6B7280;
+      --card-bg: #1e1e2a;
+      --pill-color: #D1D5DB;
+
+      display: flex;
+      gap: 0.9rem;
+      align-items: flex-start;
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+      border-left: 3px solid var(--accent);
+      transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 6%, transparent), transparent 60%);
+      pointer-events: none;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .card.hidden { display: none; }
+
+    .card.past {
+      opacity: 0.45;
+      filter: grayscale(40%);
+    }
+
+    /* Date block */
+    .card-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 44px;
+      text-align: center;
+      line-height: 1;
+    }
+
+    .card-date .weekday {
+      font-size: 0.6rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      margin-bottom: 0.15rem;
+    }
+
+    .card-date .day {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .card-date .month-yr {
+      font-size: 0.65rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Info block */
+    .card-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-artist {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--pill-color);
+      margin-bottom: 0.25rem;
+    }
+
+    .card-venue {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-location {
+      font-size: 0.78rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .card-location .flag {
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+
+    /* ── Empty state ─────────────────────────────────────── */
+    .empty-state {
+      text-align: center;
+      padding: 4rem 1rem;
+      color: var(--muted);
+      display: none;
+    }
+
+    .empty-state.visible { display: block; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    .footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Toggle past ─────────────────────────────────────── */
+    .toggle-past {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-family: var(--font);
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .toggle-past:hover { border-color: var(--muted); color: var(--text); }
+    .toggle-past.active { border-color: #6366f1; color: #a5b4fc; }
+
+    /* ── Country-specific colours ────────────────────────── */
+  .country-netherlands { --accent: #FB923C; --card-bg: #5f3a1e; --pill-color: #FED7AA; }
+  .country-belgium { --accent: #FBBF24; --card-bg: #4a3a10; --pill-color: #FDE68A; }
+  .country-united-kingdom { --accent: #EF4444; --card-bg: #5f1e1e; --pill-color: #FCA5A5; }
+  .country-united-states { --accent: #3B82F6; --card-bg: #1e3a5f; --pill-color: #93C5FD; }
+  .country-germany { --accent: #9CA3AF; --card-bg: #2e2e2e; --pill-color: #E5E7EB; }
+  .country-denmark { --accent: #EC4899; --card-bg: #5a1040; --pill-color: #FBCFE8; }
+  .country-norway { --accent: #A78BFA; --card-bg: #2a1e5f; --pill-color: #DDD6FE; }
+  .country-sweden { --accent: #60A5FA; --card-bg: #1a2a4a; --pill-color: #BFDBFE; }
+  .country-switzerland { --accent: #F87171; --card-bg: #4a1010; --pill-color: #FECACA; }
+  .country-italy { --accent: #34D399; --card-bg: #0f3a22; --pill-color: #BBF7D0; }
+  .country-poland { --accent: #F472B6; --card-bg: #4a1030; --pill-color: #FBCFE8; }
+  .country-france { --accent: #818CF8; --card-bg: #1e2250; --pill-color: #C7D2FE; }
+  .country-ireland { --accent: #10B981; --card-bg: #0a3a22; --pill-color: #A7F3D0; }
+  .country-canada { --accent: #F97316; --card-bg: #5f2a1e; --pill-color: #FED7AA; }
+  .country-australia { --accent: #0EA5E9; --card-bg: #0a2a40; --pill-color: #BAE6FD; }
+  .country-new-zealand { --accent: #06B6D4; --card-bg: #083040; --pill-color: #A5F3FC; }
+
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .site-header, .filters { padding: 0.75rem 1rem; }
+      .main { padding: 0 1rem 3rem; margin-top: 1rem; }
+      .cards-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-title">Concert Calendar <span>/ upcoming shows</span></div>
+    <div class="stats" id="stats">71 upcoming · 71 total · updated 17 Mar 2026, 19:04 UTC</div>
+  </div>
+</header>
+
+<!-- Filters -->
+<div class="filters">
+  <div class="filters-inner">
+    <div class="filter-row">
+      <span class="filter-label">Artist</span>
+      <button class="legend-btn btn-all artist-btn active" data-artist="all" onclick="toggleArtist(this)">All</button>
+      <button class="legend-btn artist-btn" data-artist="Couch" onclick="toggleArtist(this)">Couch</button>
+<button class="legend-btn artist-btn" data-artist="Olivia Dean" onclick="toggleArtist(this)">Olivia Dean</button>
+<button class="legend-btn artist-btn" data-artist="Sammy Rae & The Friends" onclick="toggleArtist(this)">Sammy Rae & The Friends</button>
+
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">Country</span>
+      <button class="legend-btn btn-all active" data-country="all" onclick="toggleCountry(this)">All</button>
+      <button class="legend-btn" data-country="Netherlands" style="border-color:#FB923C;color:#FED7AA" onclick="toggleCountry(this)">Netherlands</button>
+<button class="legend-btn" data-country="Belgium" style="border-color:#FBBF24;color:#FDE68A" onclick="toggleCountry(this)">Belgium</button>
+<button class="legend-btn" data-country="United Kingdom" style="border-color:#EF4444;color:#FCA5A5" onclick="toggleCountry(this)">United Kingdom</button>
+<button class="legend-btn" data-country="United States" style="border-color:#3B82F6;color:#93C5FD" onclick="toggleCountry(this)">United States</button>
+<button class="legend-btn" data-country="Germany" style="border-color:#9CA3AF;color:#E5E7EB" onclick="toggleCountry(this)">Germany</button>
+<button class="legend-btn" data-country="Denmark" style="border-color:#EC4899;color:#FBCFE8" onclick="toggleCountry(this)">Denmark</button>
+<button class="legend-btn" data-country="Norway" style="border-color:#A78BFA;color:#DDD6FE" onclick="toggleCountry(this)">Norway</button>
+<button class="legend-btn" data-country="Sweden" style="border-color:#60A5FA;color:#BFDBFE" onclick="toggleCountry(this)">Sweden</button>
+<button class="legend-btn" data-country="Switzerland" style="border-color:#F87171;color:#FECACA" onclick="toggleCountry(this)">Switzerland</button>
+<button class="legend-btn" data-country="Italy" style="border-color:#34D399;color:#BBF7D0" onclick="toggleCountry(this)">Italy</button>
+<button class="legend-btn" data-country="Poland" style="border-color:#F472B6;color:#FBCFE8" onclick="toggleCountry(this)">Poland</button>
+<button class="legend-btn" data-country="France" style="border-color:#818CF8;color:#C7D2FE" onclick="toggleCountry(this)">France</button>
+<button class="legend-btn" data-country="Ireland" style="border-color:#10B981;color:#A7F3D0" onclick="toggleCountry(this)">Ireland</button>
+<button class="legend-btn" data-country="Canada" style="border-color:#F97316;color:#FED7AA" onclick="toggleCountry(this)">Canada</button>
+<button class="legend-btn" data-country="Australia" style="border-color:#0EA5E9;color:#BAE6FD" onclick="toggleCountry(this)">Australia</button>
+<button class="legend-btn" data-country="New Zealand" style="border-color:#06B6D4;color:#A5F3FC" onclick="toggleCountry(this)">New Zealand</button>
+
+    </div>
+    <div class="filter-row">
+      <span class="filter-label">View</span>
+      <button class="toggle-past active" id="btnPast" onclick="togglePast(this)">Show past shows</button>
+    </div>
+  </div>
+</div>
+
+<!-- Calendar -->
+<main class="main" id="main"></main>
+
+<div class="empty-state" id="emptyState">No concerts match your filters.</div>
+
+<!-- Footer -->
+<footer class="footer">
+  Data scraped from official artist websites · auto-updated daily via GitHub Actions
+</footer>
+
+<script>
+  const RAW = [{"id": "d6c74c04cfd6", "artist": "Couch", "date": "2026-03-18", "city": "Utrecht", "state": null, "country": "Netherlands", "venue": "TivoliVredenburg", "source_url": "https://www.couchtheband.com/tour"}, {"id": "20107e77b0e0", "artist": "Couch", "date": "2026-03-19", "city": "Amsterdam", "state": null, "country": "Netherlands", "venue": "Paradiso Noord", "source_url": "https://www.couchtheband.com/tour"}, {"id": "8f3db9c18053", "artist": "Couch", "date": "2026-03-20", "city": "Ghent", "state": null, "country": "Belgium", "venue": "Ha Concerts", "source_url": "https://www.couchtheband.com/tour"}, {"id": "2d4220144bc8", "artist": "Couch", "date": "2026-03-22", "city": "London", "state": null, "country": "United Kingdom", "venue": "O2 Forum Kentish Town", "source_url": "https://www.couchtheband.com/tour"}, {"id": "4d7e5cb58095", "artist": "Couch", "date": "2026-04-20", "city": "Boston", "state": "MA", "country": "United States", "venue": "Boston Marathon Party", "source_url": "https://www.couchtheband.com/tour"}, {"id": "4e5c0a25104d", "artist": "Olivia Dean", "date": "2026-04-22", "city": "Glasgow", "state": null, "country": "United Kingdom", "venue": "OVO Hydro", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "c747b466ed4f", "artist": "Olivia Dean", "date": "2026-04-23", "city": "Glasgow", "state": null, "country": "United Kingdom", "venue": "OVO Hydro", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "48f556dbbbcc", "artist": "Olivia Dean", "date": "2026-04-25", "city": "Manchester", "state": null, "country": "United Kingdom", "venue": "Co-op Live", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "f9babf36f65f", "artist": "Olivia Dean", "date": "2026-04-26", "city": "Manchester", "state": null, "country": "United Kingdom", "venue": "Co-op Live", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "bdc80e9a2057", "artist": "Olivia Dean", "date": "2026-04-29", "city": "London", "state": null, "country": "United Kingdom", "venue": "The O2", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "d3d258bb66cf", "artist": "Olivia Dean", "date": "2026-04-30", "city": "London", "state": null, "country": "United Kingdom", "venue": "The O2", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "1a382cab118b", "artist": "Olivia Dean", "date": "2026-05-01", "city": "London", "state": null, "country": "United Kingdom", "venue": "The O2", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "383b1349493f", "artist": "Olivia Dean", "date": "2026-05-02", "city": "London", "state": null, "country": "United Kingdom", "venue": "The O2", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "c3830d9567f4", "artist": "Olivia Dean", "date": "2026-05-08", "city": "Brussels", "state": null, "country": "Belgium", "venue": "Forest National", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "479da636f4e9", "artist": "Olivia Dean", "date": "2026-05-09", "city": "Amsterdam", "state": null, "country": "Netherlands", "venue": "Ziggo Dome", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "42321834dab5", "artist": "Olivia Dean", "date": "2026-05-11", "city": "Düsseldorf", "state": null, "country": "Germany", "venue": "Mitsubishi Electric Halle", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "bf2bf0334b2a", "artist": "Olivia Dean", "date": "2026-05-12", "city": "Berlin", "state": null, "country": "Germany", "venue": "Velodrom", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "41a690cf8b63", "artist": "Sammy Rae & The Friends", "date": "2026-05-14", "city": "Dallas", "state": "TX", "country": "United States", "venue": "Longhorn Ballroom", "source_url": "https://www.sammyrae.com/gigs-hangs"}, {"id": "105060798021", "artist": "Olivia Dean", "date": "2026-05-14", "city": "Copenhagen", "state": null, "country": "Denmark", "venue": "Royal Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "f9e0c8600b48", "artist": "Olivia Dean", "date": "2026-05-16", "city": "Oslo", "state": null, "country": "Norway", "venue": "Unity Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "61ad7b4db383", "artist": "Olivia Dean", "date": "2026-05-17", "city": "Stockholm", "state": null, "country": "Sweden", "venue": "Avicii Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "087bdd9a6616", "artist": "Olivia Dean", "date": "2026-05-20", "city": "Zurich", "state": null, "country": "Switzerland", "venue": "Hallenstadion", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "46258f6ae653", "artist": "Olivia Dean", "date": "2026-05-22", "city": "Milan", "state": null, "country": "Italy", "venue": "Kozel Carroponte", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "e5a1c865359c", "artist": "Olivia Dean", "date": "2026-05-30", "city": "Warsaw", "state": null, "country": "Poland", "venue": "Orange Warsaw Festival", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "9648b7304611", "artist": "Olivia Dean", "date": "2026-06-11", "city": "London", "state": null, "country": "United Kingdom", "venue": "The O2", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "bc3653473488", "artist": "Olivia Dean", "date": "2026-06-12", "city": "London", "state": null, "country": "United Kingdom", "venue": "The O2", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "68f0a2c69847", "artist": "Olivia Dean", "date": "2026-06-14", "city": "Amsterdam", "state": null, "country": "Netherlands", "venue": "Ziggo Dome", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "b8bdacf31246", "artist": "Olivia Dean", "date": "2026-06-17", "city": "Paris", "state": null, "country": "France", "venue": "Accor Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "949c7643df2a", "artist": "Olivia Dean", "date": "2026-06-20", "city": "Dublin", "state": null, "country": "Ireland", "venue": "Fairview Park", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "11b092f438ef", "artist": "Olivia Dean", "date": "2026-06-21", "city": "Dublin", "state": null, "country": "Ireland", "venue": "Fairview Park", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "1cba9722a9f5", "artist": "Couch", "date": "2026-06-25", "city": "Rothbury", "state": "MI", "country": "United States", "venue": "Electric Forest Festival", "source_url": "https://www.couchtheband.com/tour"}, {"id": "fe8b8330df69", "artist": "Olivia Dean", "date": "2026-07-10", "city": "San Francisco", "state": "CA", "country": "United States", "venue": "Chase Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "3fcc506e4282", "artist": "Olivia Dean", "date": "2026-07-11", "city": "San Francisco", "state": "CA", "country": "United States", "venue": "Chase Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "c1d46331f502", "artist": "Olivia Dean", "date": "2026-07-14", "city": "Los Angeles", "state": "CA", "country": "United States", "venue": "Crypto.com Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "669ea325b956", "artist": "Olivia Dean", "date": "2026-07-15", "city": "Los Angeles", "state": "CA", "country": "United States", "venue": "Crypto.com Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "3d76219e5fd4", "artist": "Sammy Rae & The Friends", "date": "2026-07-18", "city": "Marshfield", "state": "MA", "country": "United States", "venue": "Levitate Music and Arts Festival", "source_url": "https://www.sammyrae.com/gigs-hangs"}, {"id": "af87150f64d7", "artist": "Olivia Dean", "date": "2026-07-18", "city": "Las Vegas", "state": "NV", "country": "United States", "venue": "MGM Grand Garden Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "d3edfc2d2bbf", "artist": "Couch", "date": "2026-07-19", "city": "Saint Paul", "state": "MN", "country": "United States", "venue": "Minnesota Yacht Club", "source_url": "https://www.couchtheband.com/tour"}, {"id": "50f5dd16bc70", "artist": "Olivia Dean", "date": "2026-07-22", "city": "Salt Lake City", "state": "UT", "country": "United States", "venue": "Maverick Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "d232302b0647", "artist": "Olivia Dean", "date": "2026-07-25", "city": "Denver", "state": "CO", "country": "United States", "venue": "Ball Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "52aea7881b82", "artist": "Olivia Dean", "date": "2026-07-26", "city": "Denver", "state": "CO", "country": "United States", "venue": "Ball Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "0b7a097ea1dc", "artist": "Olivia Dean", "date": "2026-07-29", "city": "Minneapolis", "state": "MN", "country": "United States", "venue": "Target Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "906220cd4450", "artist": "Couch", "date": "2026-08-04", "city": "Nantucket", "state": "MA", "country": "United States", "venue": "The Chicken Box", "source_url": "https://www.couchtheband.com/tour"}, {"id": "d52524ef4e95", "artist": "Olivia Dean", "date": "2026-08-04", "city": "Toronto", "state": "ON", "country": "Canada", "venue": "Scotiabank Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "125fe258bfa8", "artist": "Couch", "date": "2026-08-05", "city": "Nantucket", "state": "MA", "country": "United States", "venue": "The Chicken Box", "source_url": "https://www.couchtheband.com/tour"}, {"id": "f5ec666f339b", "artist": "Olivia Dean", "date": "2026-08-05", "city": "Toronto", "state": "ON", "country": "Canada", "venue": "Scotiabank Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "edeb090414ff", "artist": "Olivia Dean", "date": "2026-08-07", "city": "Montreal", "state": "QC", "country": "Canada", "venue": "Bell Centre", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "9674f1321757", "artist": "Olivia Dean", "date": "2026-08-10", "city": "Boston", "state": "MA", "country": "United States", "venue": "TD Garden", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "731637793fe7", "artist": "Couch", "date": "2026-08-11", "city": "Shelburne", "state": "VT", "country": "United States", "venue": "The Green at Shelburne Museum", "source_url": "https://www.couchtheband.com/tour"}, {"id": "461602f5c3cb", "artist": "Couch", "date": "2026-08-12", "city": "Shelburne", "state": "VT", "country": "United States", "venue": "The Green at Shelburne Museum", "source_url": "https://www.couchtheband.com/tour"}, {"id": "c0edbdf8511f", "artist": "Olivia Dean", "date": "2026-08-12", "city": "Baltimore", "state": "MD", "country": "United States", "venue": "CFG Bank Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "700151abc745", "artist": "Olivia Dean", "date": "2026-08-14", "city": "New York", "state": "NY", "country": "United States", "venue": "Madison Square Garden", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "3c2eaaedd8cf", "artist": "Couch", "date": "2026-08-15", "city": "Portland", "state": "ME", "country": "United States", "venue": "Thompson's Point", "source_url": "https://www.couchtheband.com/tour"}, {"id": "e4e2d0b109c4", "artist": "Olivia Dean", "date": "2026-08-15", "city": "New York", "state": "NY", "country": "United States", "venue": "Madison Square Garden", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "d4a9747ea594", "artist": "Couch", "date": "2026-08-16", "city": "Portland", "state": "ME", "country": "United States", "venue": "Thompson's Point", "source_url": "https://www.couchtheband.com/tour"}, {"id": "ed82a068a718", "artist": "Olivia Dean", "date": "2026-08-17", "city": "New York", "state": "NY", "country": "United States", "venue": "Madison Square Garden", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "9e78b9815554", "artist": "Olivia Dean", "date": "2026-08-18", "city": "New York", "state": "NY", "country": "United States", "venue": "Madison Square Garden", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "f786a49d8b7b", "artist": "Olivia Dean", "date": "2026-08-22", "city": "Atlanta", "state": "GA", "country": "United States", "venue": "State Farm Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "a2416c53d0c0", "artist": "Olivia Dean", "date": "2026-08-25", "city": "Houston", "state": "TX", "country": "United States", "venue": "Toyota Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "fdbe8b879db5", "artist": "Olivia Dean", "date": "2026-08-28", "city": "Austin", "state": "TX", "country": "United States", "venue": "Moody Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "c261a7ce1bef", "artist": "Olivia Dean", "date": "2026-08-29", "city": "Austin", "state": "TX", "country": "United States", "venue": "Moody Center", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "09c93e025a94", "artist": "Couch", "date": "2026-09-24", "city": "Louisville", "state": "KY", "country": "United States", "venue": "Bourbon & Beyond", "source_url": "https://www.couchtheband.com/tour"}, {"id": "f8ce3ed29b05", "artist": "Olivia Dean", "date": "2026-10-05", "city": "Melbourne", "state": null, "country": "Australia", "venue": "Rod Laver Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "8442544e37bd", "artist": "Olivia Dean", "date": "2026-10-06", "city": "Melbourne", "state": null, "country": "Australia", "venue": "Rod Laver Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "1aa3e67dcc5d", "artist": "Olivia Dean", "date": "2026-10-09", "city": "Sydney", "state": null, "country": "Australia", "venue": "Qudos Bank Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "d917a219849b", "artist": "Olivia Dean", "date": "2026-10-10", "city": "Sydney", "state": null, "country": "Australia", "venue": "Qudos Bank Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "a02dabd2f25b", "artist": "Olivia Dean", "date": "2026-10-13", "city": "Brisbane", "state": null, "country": "Australia", "venue": "Brisbane Entertainment Centre", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "0edf90e4ccdd", "artist": "Olivia Dean", "date": "2026-10-17", "city": "Auckland", "state": null, "country": "New Zealand", "venue": "Spark Arena", "source_url": "https://www.oliviadeano.com/#tour"}, {"id": "8ba06b05bf5b", "artist": "Sammy Rae & The Friends", "date": "2026-11-05", "city": "New York", "state": "NY", "country": "United States", "venue": "Brooklyn Paramount", "source_url": "https://www.sammyrae.com/gigs-hangs"}, {"id": "40f25aba637a", "artist": "Sammy Rae & The Friends", "date": "2026-11-06", "city": "New York", "state": "NY", "country": "United States", "venue": "Brooklyn Paramount", "source_url": "https://www.sammyrae.com/gigs-hangs"}, {"id": "3e39cf991a32", "artist": "Sammy Rae & The Friends", "date": "2026-11-07", "city": "Boston", "state": "MA", "country": "United States", "venue": "MGM Music Hall at Fenway", "source_url": "https://www.sammyrae.com/gigs-hangs"}];
+
+  // Country slug helper
+  function slug(s) {
+    return s.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
+  }
+
+  // State
+  let activeArtist  = 'all';
+  let activeCountry = 'all';
+  let showPast      = true;
+
+  function countryFlag(country) {
+    const flags = {
+      'United States':  '🇺🇸', 'United Kingdom': '🇬🇧', 'Canada': '🇨🇦',
+      'France': '🇫🇷', 'Germany': '🇩🇪', 'Netherlands': '🇳🇱',
+      'Belgium': '🇧🇪', 'Denmark': '🇩🇰', 'Norway': '🇳🇴',
+      'Sweden': '🇸🇪', 'Italy': '🇮🇹', 'Switzerland': '🇨🇭',
+      'Poland': '🇵🇱', 'Ireland': '🇮🇪', 'Australia': '🇦🇺',
+      'New Zealand': '🇳🇿', 'Austria': '🇦🇹', 'Spain': '🇪🇸',
+    };
+    return flags[country] || '🌍';
+  }
+
+  function formatLocation(c) {
+    let parts = [c.city];
+    if (c.state) parts.push(c.state);
+    parts.push(c.country);
+    return parts.join(', ');
+  }
+
+  function render() {
+    const today = new Date().toISOString().slice(0, 10);
+    const main  = document.getElementById('main');
+    const empty = document.getElementById('emptyState');
+
+    const filtered = RAW.filter(c => {
+      if (!showPast && c.date < today) return false;
+      if (activeArtist  !== 'all' && c.artist  !== activeArtist)  return false;
+      if (activeCountry !== 'all' && c.country !== activeCountry) return false;
+      return true;
+    });
+
+    if (filtered.length === 0) {
+      main.innerHTML = '';
+      empty.classList.add('visible');
+      return;
+    }
+    empty.classList.remove('visible');
+
+    // Group by YYYY-MM
+    const groups = {};
+    filtered.forEach(c => {
+      const key = c.date.slice(0, 7);
+      (groups[key] = groups[key] || []).push(c);
+    });
+
+    const monthNames = [
+      'January','February','March','April','May','June',
+      'July','August','September','October','November','December'
+    ];
+
+    let html = '';
+    for (const [ym, concerts] of Object.entries(groups).sort()) {
+      const [yr, mo] = ym.split('-');
+      const heading = `${monthNames[parseInt(mo)-1]} ${yr}`;
+      html += `<section class="month-group"><h2 class="month-heading">${heading}</h2><div class="cards-grid">`;
+
+      concerts.forEach(c => {
+        const d = new Date(c.date + 'T12:00:00');
+        const day    = d.getDate();
+        const wday   = ['SUN','MON','TUE','WED','THU','FRI','SAT'][d.getDay()];
+        const mon    = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'][d.getMonth()];
+        const isPast = c.date < today;
+        const cs     = `country-${slug(c.country)}`;
+
+        html += `
+          <article class="card ${cs}${isPast ? ' past' : ''}" data-artist="${c.artist}" data-country="${c.country}" data-date="${c.date}">
+            <div class="card-date">
+              <span class="weekday">${wday}</span>
+              <span class="day">${day}</span>
+              <span class="month-yr">${mon} ${d.getFullYear()}</span>
+            </div>
+            <div class="card-info">
+              <div class="card-artist">${c.artist}</div>
+              <div class="card-venue">${c.venue || '—'}</div>
+              <div class="card-location">
+                <span class="flag">${countryFlag(c.country)}</span>
+                ${formatLocation(c)}
+              </div>
+            </div>
+          </article>`;
+      });
+
+      html += '</div></section>';
+    }
+
+    main.innerHTML = html;
+
+    // Update stats
+    const upcoming = filtered.filter(c => c.date >= today).length;
+    document.getElementById('stats').textContent =
+      `${upcoming} upcoming · ${filtered.length} shown · updated 17 Mar 2026, 19:04 UTC`;
+  }
+
+  function toggleArtist(btn) {
+    const val = btn.dataset.artist;
+    activeArtist = val;
+    document.querySelectorAll('.artist-btn').forEach(b => b.classList.toggle('active', b.dataset.artist === val));
+    render();
+  }
+
+  function toggleCountry(btn) {
+    const val = btn.dataset.country;
+    activeCountry = val;
+    document.querySelectorAll('[data-country]').forEach(b => b.classList.toggle('active', b.dataset.country === val));
+    render();
+  }
+
+  function togglePast(btn) {
+    showPast = !showPast;
+    btn.classList.toggle('active', showPast);
+    render();
+  }
+
+  // Initial render
+  render();
+</script>
+</body>
+</html>
