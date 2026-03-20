@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-03-19T06:22:36Z",
+  "scraped_at": "2026-03-20T06:19:23Z",
   "concerts": [
-    {
-      "id": "20107e77b0e0",
-      "artist": "Couch",
-      "date": "2026-03-19",
-      "city": "Amsterdam",
-      "state": null,
-      "country": "Netherlands",
-      "venue": "Paradiso Noord",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "8f3db9c18053",
       "artist": "Couch",
@@ -278,7 +268,7 @@
       "city": "Dublin",
       "state": null,
       "country": "Ireland",
-      "venue": "Fairview Park",
+      "venue": "Marlay Park",
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
@@ -288,7 +278,7 @@
       "city": "Dublin",
       "state": null,
       "country": "Ireland",
-      "venue": "Fairview Park",
+      "venue": "Marlay Park",
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
@@ -409,6 +399,16 @@
       "state": "MN",
       "country": "United States",
       "venue": "Target Center",
+      "source_url": "https://www.oliviadeano.com/#tour"
+    },
+    {
+      "id": "866ba03bb135",
+      "artist": "Olivia Dean",
+      "date": "2026-08-01",
+      "city": "Chicago",
+      "state": "IL",
+      "country": "United States",
+      "venue": "Lollapalooza",
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
