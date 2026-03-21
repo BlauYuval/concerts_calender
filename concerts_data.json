@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-03-20T06:19:23Z",
+  "scraped_at": "2026-03-21T06:13:42Z",
   "concerts": [
-    {
-      "id": "8f3db9c18053",
-      "artist": "Couch",
-      "date": "2026-03-20",
-      "city": "Ghent",
-      "state": null,
-      "country": "Belgium",
-      "venue": "Ha Concerts",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "2d4220144bc8",
       "artist": "Couch",
