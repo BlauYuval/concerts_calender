@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-04-06T06:38:31Z",
+  "scraped_at": "2026-04-07T06:32:36Z",
   "concerts": [
     {
       "id": "4d7e5cb58095",
@@ -640,6 +640,16 @@
       "country": "Australia",
       "venue": "Rod Laver Arena",
       "source_url": "https://www.oliviadeano.com/#tour"
+    },
+    {
+      "id": "c343d0cbcd2f",
+      "artist": "Sammy Rae & The Friends",
+      "date": "2026-10-06",
+      "city": "San Francisco",
+      "state": "CA",
+      "country": "United States",
+      "venue": "The Castro Theatre",
+      "source_url": "https://www.sammyrae.com/gigs-hangs"
     },
     {
       "id": "8442544e37bd",
