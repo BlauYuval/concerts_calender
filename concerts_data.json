@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-04-20T06:45:44Z",
+  "scraped_at": "2026-04-21T06:39:09Z",
   "concerts": [
-    {
-      "id": "4d7e5cb58095",
-      "artist": "Couch",
-      "date": "2026-04-20",
-      "city": "Boston",
-      "state": "MA",
-      "country": "United States",
-      "venue": "Boston Marathon Party",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "4e5c0a25104d",
       "artist": "Olivia Dean",
