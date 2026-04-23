@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-04-22T06:39:00Z",
+  "scraped_at": "2026-04-23T06:42:25Z",
   "concerts": [
-    {
-      "id": "4e5c0a25104d",
-      "artist": "Olivia Dean",
-      "date": "2026-04-22",
-      "city": "Glasgow",
-      "state": null,
-      "country": "United Kingdom",
-      "venue": "OVO Hydro",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "c747b466ed4f",
       "artist": "Olivia Dean",
