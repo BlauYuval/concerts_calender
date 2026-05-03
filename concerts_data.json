@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-05-02T06:40:06Z",
+  "scraped_at": "2026-05-03T06:52:39Z",
   "concerts": [
-    {
-      "id": "bdc80e9a2057",
-      "artist": "Olivia Dean",
-      "date": "2026-04-29",
-      "city": "London",
-      "state": null,
-      "country": "United Kingdom",
-      "venue": "The O2",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "d3d258bb66cf",
       "artist": "Olivia Dean",
