@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-05-04T07:02:43Z",
+  "scraped_at": "2026-05-05T06:47:11Z",
   "concerts": [
-    {
-      "id": "f9babf36f65f",
-      "artist": "Olivia Dean",
-      "date": "2026-04-26",
-      "city": "Manchester",
-      "state": null,
-      "country": "United Kingdom",
-      "venue": "Co-op Live",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "bdc80e9a2057",
       "artist": "Olivia Dean",
