@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-05-05T06:47:11Z",
+  "scraped_at": "2026-05-06T06:56:11Z",
   "concerts": [
     {
       "id": "bdc80e9a2057",
@@ -212,9 +212,9 @@
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
-      "id": "1cba9722a9f5",
+      "id": "94a822a696c8",
       "artist": "Couch",
-      "date": "2026-06-25",
+      "date": "2026-06-26",
       "city": "Rothbury",
       "state": "MI",
       "country": "United States",
@@ -260,6 +260,16 @@
       "country": "United States",
       "venue": "Crypto.com Arena",
       "source_url": "https://www.oliviadeano.com/#tour"
+    },
+    {
+      "id": "e203eb9c4431",
+      "artist": "Couch",
+      "date": "2026-07-17",
+      "city": "Indianapolis",
+      "state": "IN",
+      "country": "United States",
+      "venue": "HIFI Annex",
+      "source_url": "https://www.couchtheband.com/tour"
     },
     {
       "id": "3d76219e5fd4",
