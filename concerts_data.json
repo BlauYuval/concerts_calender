@@ -1,46 +1,6 @@
 {
-  "scraped_at": "2026-05-18T07:23:23Z",
+  "scraped_at": "2026-05-19T07:13:31Z",
   "concerts": [
-    {
-      "id": "bf2bf0334b2a",
-      "artist": "Olivia Dean",
-      "date": "2026-05-12",
-      "city": "Berlin",
-      "state": null,
-      "country": "Germany",
-      "venue": "Uber Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "105060798021",
-      "artist": "Olivia Dean",
-      "date": "2026-05-14",
-      "city": "Copenhagen",
-      "state": null,
-      "country": "Denmark",
-      "venue": "Royal Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "f9e0c8600b48",
-      "artist": "Olivia Dean",
-      "date": "2026-05-16",
-      "city": "Oslo",
-      "state": null,
-      "country": "Norway",
-      "venue": "Unity Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "61ad7b4db383",
-      "artist": "Olivia Dean",
-      "date": "2026-05-17",
-      "city": "Stockholm",
-      "state": null,
-      "country": "Sweden",
-      "venue": "Avicii Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "087bdd9a6616",
       "artist": "Olivia Dean",
@@ -845,6 +805,16 @@
       "id": "4232239a13ca",
       "artist": "Sammy Rae & The Friends",
       "date": "2026-11-13",
+      "city": "Washington",
+      "state": null,
+      "country": "D.C",
+      "venue": "9:30 Club",
+      "source_url": "https://www.sammyrae.com/gigs-hangs"
+    },
+    {
+      "id": "9046a95e4fd3",
+      "artist": "Sammy Rae & The Friends",
+      "date": "2026-11-14",
       "city": "Washington",
       "state": null,
       "country": "D.C",
