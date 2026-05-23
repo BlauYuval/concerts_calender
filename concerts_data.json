@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-05-22T07:13:41Z",
+  "scraped_at": "2026-05-23T06:56:09Z",
   "concerts": [
-    {
-      "id": "087bdd9a6616",
-      "artist": "Olivia Dean",
-      "date": "2026-05-20",
-      "city": "Zurich",
-      "state": null,
-      "country": "Switzerland",
-      "venue": "Hallenstadion",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "46258f6ae653",
-      "artist": "Olivia Dean",
-      "date": "2026-05-22",
-      "city": "Milan",
-      "state": null,
-      "country": "Italy",
-      "venue": "Fiera Milano Live (Rho)",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "e5a1c865359c",
       "artist": "Olivia Dean",
