@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-06-09T07:14:43Z",
+  "scraped_at": "2026-06-10T07:29:36Z",
   "concerts": [
     {
       "id": "9648b7304611",
@@ -370,6 +370,16 @@
       "country": "United States",
       "venue": "Toyota Center",
       "source_url": "https://www.oliviadeano.com/#tour"
+    },
+    {
+      "id": "c54757e681b4",
+      "artist": "Couch",
+      "date": "2026-08-26",
+      "city": "South Kingstown",
+      "state": "RI",
+      "country": "United States",
+      "venue": "Ocean Mist",
+      "source_url": "https://www.couchtheband.com/tour"
     },
     {
       "id": "fdbe8b879db5",
