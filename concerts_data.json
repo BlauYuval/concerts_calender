@@ -1,66 +1,6 @@
 {
-  "scraped_at": "2026-06-22T08:00:09Z",
+  "scraped_at": "2026-06-23T07:15:30Z",
   "concerts": [
-    {
-      "id": "9648b7304611",
-      "artist": "Olivia Dean",
-      "date": "2026-06-11",
-      "city": "London",
-      "state": null,
-      "country": "United Kingdom",
-      "venue": "The O2",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "bc3653473488",
-      "artist": "Olivia Dean",
-      "date": "2026-06-12",
-      "city": "London",
-      "state": null,
-      "country": "United Kingdom",
-      "venue": "The O2",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "68f0a2c69847",
-      "artist": "Olivia Dean",
-      "date": "2026-06-14",
-      "city": "Amsterdam",
-      "state": null,
-      "country": "Netherlands",
-      "venue": "Ziggo Dome",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "b8bdacf31246",
-      "artist": "Olivia Dean",
-      "date": "2026-06-17",
-      "city": "Paris",
-      "state": null,
-      "country": "France",
-      "venue": "Accor Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "949c7643df2a",
-      "artist": "Olivia Dean",
-      "date": "2026-06-20",
-      "city": "Dublin",
-      "state": null,
-      "country": "Ireland",
-      "venue": "Marlay Park",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "11b092f438ef",
-      "artist": "Olivia Dean",
-      "date": "2026-06-21",
-      "city": "Dublin",
-      "state": null,
-      "country": "Ireland",
-      "venue": "Marlay Park",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "94a822a696c8",
       "artist": "Couch",
