@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-06-26T07:18:12Z",
+  "scraped_at": "2026-06-27T07:05:46Z",
   "concerts": [
-    {
-      "id": "94a822a696c8",
-      "artist": "Couch",
-      "date": "2026-06-26",
-      "city": "Rothbury",
-      "state": "MI",
-      "country": "United States",
-      "venue": "Electric Forest Festival",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "e203eb9c4431",
       "artist": "Couch",
