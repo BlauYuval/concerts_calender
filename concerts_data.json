@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-07-17T08:00:25Z",
+  "scraped_at": "2026-07-18T07:40:35Z",
   "concerts": [
-    {
-      "id": "e203eb9c4431",
-      "artist": "Couch",
-      "date": "2026-07-17",
-      "city": "Indianapolis",
-      "state": "IN",
-      "country": "United States",
-      "venue": "HIFI Annex",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "0f3ef2f710f8",
       "artist": "Couch",
