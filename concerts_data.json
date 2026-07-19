@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-07-18T07:40:35Z",
+  "scraped_at": "2026-07-19T08:07:42Z",
   "concerts": [
-    {
-      "id": "0f3ef2f710f8",
-      "artist": "Couch",
-      "date": "2026-07-18",
-      "city": "Elkhart",
-      "state": "IN",
-      "country": "United States",
-      "venue": "Elkhart Central Green",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
-    {
-      "id": "3d76219e5fd4",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-07-18",
-      "city": "Marshfield",
-      "state": "MA",
-      "country": "United States",
-      "venue": "Levitate Music and Arts Festival",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "af87150f64d7",
       "artist": "Olivia Dean",
