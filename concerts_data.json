@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-07-19T08:07:42Z",
+  "scraped_at": "2026-07-20T08:48:35Z",
   "concerts": [
     {
       "id": "af87150f64d7",
@@ -10,16 +10,6 @@
       "country": "United States",
       "venue": "MGM Grand Garden Arena",
       "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "d3edfc2d2bbf",
-      "artist": "Couch",
-      "date": "2026-07-19",
-      "city": "Saint Paul",
-      "state": "MN",
-      "country": "United States",
-      "venue": "Minnesota Yacht Club",
-      "source_url": "https://www.couchtheband.com/tour"
     },
     {
       "id": "50f5dd16bc70",
