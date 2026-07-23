@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-07-22T08:17:09Z",
+  "scraped_at": "2026-07-23T08:21:29Z",
   "concerts": [
-    {
-      "id": "af87150f64d7",
-      "artist": "Olivia Dean",
-      "date": "2026-07-18",
-      "city": "Las Vegas",
-      "state": "NV",
-      "country": "United States",
-      "venue": "MGM Grand Garden Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "50f5dd16bc70",
-      "artist": "Olivia Dean",
-      "date": "2026-07-22",
-      "city": "Salt Lake City",
-      "state": "UT",
-      "country": "United States",
-      "venue": "Maverick Center",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "d232302b0647",
       "artist": "Olivia Dean",
