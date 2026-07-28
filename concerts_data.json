@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-07-27T09:39:49Z",
+  "scraped_at": "2026-07-28T08:24:25Z",
   "concerts": [
-    {
-      "id": "d232302b0647",
-      "artist": "Olivia Dean",
-      "date": "2026-07-25",
-      "city": "Denver",
-      "state": "CO",
-      "country": "United States",
-      "venue": "Ball Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "52aea7881b82",
-      "artist": "Olivia Dean",
-      "date": "2026-07-26",
-      "city": "Denver",
-      "state": "CO",
-      "country": "United States",
-      "venue": "Ball Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "0b7a097ea1dc",
       "artist": "Olivia Dean",
