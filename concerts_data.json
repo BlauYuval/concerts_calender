@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-08-03T09:33:31Z",
+  "scraped_at": "2026-08-04T08:28:37Z",
   "concerts": [
-    {
-      "id": "0b7a097ea1dc",
-      "artist": "Olivia Dean",
-      "date": "2026-07-29",
-      "city": "Minneapolis",
-      "state": "MN",
-      "country": "United States",
-      "venue": "Target Center",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "866ba03bb135",
-      "artist": "Olivia Dean",
-      "date": "2026-08-01",
-      "city": "Chicago",
-      "state": "IL",
-      "country": "United States",
-      "venue": "Lollapalooza",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "906220cd4450",
       "artist": "Couch",
