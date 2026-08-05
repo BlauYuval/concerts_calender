@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-08-04T08:28:37Z",
+  "scraped_at": "2026-08-05T08:27:20Z",
   "concerts": [
-    {
-      "id": "906220cd4450",
-      "artist": "Couch",
-      "date": "2026-08-04",
-      "city": "Nantucket",
-      "state": "MA",
-      "country": "United States",
-      "venue": "The Chicken Box",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "d52524ef4e95",
       "artist": "Olivia Dean",
