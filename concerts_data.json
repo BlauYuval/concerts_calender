@@ -1,6 +1,16 @@
 {
-  "scraped_at": "2026-08-06T08:25:14Z",
+  "scraped_at": "2026-08-07T07:06:00Z",
   "concerts": [
+    {
+      "id": "d52524ef4e95",
+      "artist": "Olivia Dean",
+      "date": "2026-08-04",
+      "city": "Toronto",
+      "state": "ON",
+      "country": "Canada",
+      "venue": "Scotiabank Arena",
+      "source_url": "https://www.oliviadeano.com/#tour"
+    },
     {
       "id": "f5ec666f339b",
       "artist": "Olivia Dean",
