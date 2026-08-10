@@ -1,36 +1,6 @@
 {
-  "scraped_at": "2026-08-09T06:44:58Z",
+  "scraped_at": "2026-08-10T07:20:36Z",
   "concerts": [
-    {
-      "id": "d52524ef4e95",
-      "artist": "Olivia Dean",
-      "date": "2026-08-04",
-      "city": "Toronto",
-      "state": "ON",
-      "country": "Canada",
-      "venue": "Scotiabank Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "f5ec666f339b",
-      "artist": "Olivia Dean",
-      "date": "2026-08-05",
-      "city": "Toronto",
-      "state": "ON",
-      "country": "Canada",
-      "venue": "Scotiabank Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "edeb090414ff",
-      "artist": "Olivia Dean",
-      "date": "2026-08-07",
-      "city": "Montreal",
-      "state": "QC",
-      "country": "Canada",
-      "venue": "Bell Centre",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "9674f1321757",
       "artist": "Olivia Dean",
