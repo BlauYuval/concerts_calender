@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-08-10T07:20:36Z",
+  "scraped_at": "2026-08-11T06:57:12Z",
   "concerts": [
-    {
-      "id": "9674f1321757",
-      "artist": "Olivia Dean",
-      "date": "2026-08-10",
-      "city": "Boston",
-      "state": "MA",
-      "country": "United States",
-      "venue": "TD Garden",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "731637793fe7",
       "artist": "Couch",
