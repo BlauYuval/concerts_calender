@@ -1,36 +1,6 @@
 {
-  "scraped_at": "2026-08-12T07:16:16Z",
+  "scraped_at": "2026-08-13T07:18:21Z",
   "concerts": [
-    {
-      "id": "9674f1321757",
-      "artist": "Olivia Dean",
-      "date": "2026-08-10",
-      "city": "Boston",
-      "state": "MA",
-      "country": "United States",
-      "venue": "TD Garden",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "461602f5c3cb",
-      "artist": "Couch",
-      "date": "2026-08-12",
-      "city": "Shelburne",
-      "state": "VT",
-      "country": "United States",
-      "venue": "The Green at Shelburne Museum",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
-    {
-      "id": "c0edbdf8511f",
-      "artist": "Olivia Dean",
-      "date": "2026-08-12",
-      "city": "Baltimore",
-      "state": "MD",
-      "country": "United States",
-      "venue": "CFG Bank Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "700151abc745",
       "artist": "Olivia Dean",
@@ -278,7 +248,7 @@
       "city": "Sydney",
       "state": null,
       "country": "Australia",
-      "venue": "Qudos Bank Arena",
+      "venue": "Afterpay Arena",
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
@@ -298,7 +268,7 @@
       "city": "Sydney",
       "state": null,
       "country": "Australia",
-      "venue": "Qudos Bank Arena",
+      "venue": "Afterpay Arena",
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
@@ -368,7 +338,7 @@
       "city": "Auckland",
       "state": null,
       "country": "New Zealand",
-      "venue": "Spark Arena",
+      "venue": "Western Springs Bowl",
       "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
