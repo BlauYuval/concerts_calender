@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-08-16T06:30:25Z",
+  "scraped_at": "2026-08-17T06:41:31Z",
   "concerts": [
     {
       "id": "700151abc745",
@@ -20,16 +20,6 @@
       "country": "United States",
       "venue": "Madison Square Garden",
       "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "d4a9747ea594",
-      "artist": "Couch",
-      "date": "2026-08-16",
-      "city": "Portland",
-      "state": "ME",
-      "country": "United States",
-      "venue": "Thompson's Point",
-      "source_url": "https://www.couchtheband.com/tour"
     },
     {
       "id": "ed82a068a718",
