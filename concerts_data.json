@@ -1,36 +1,6 @@
 {
-  "scraped_at": "2026-08-17T06:41:31Z",
+  "scraped_at": "2026-08-18T06:33:13Z",
   "concerts": [
-    {
-      "id": "700151abc745",
-      "artist": "Olivia Dean",
-      "date": "2026-08-14",
-      "city": "New York",
-      "state": "NY",
-      "country": "United States",
-      "venue": "Madison Square Garden",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "e4e2d0b109c4",
-      "artist": "Olivia Dean",
-      "date": "2026-08-15",
-      "city": "New York",
-      "state": "NY",
-      "country": "United States",
-      "venue": "Madison Square Garden",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "ed82a068a718",
-      "artist": "Olivia Dean",
-      "date": "2026-08-17",
-      "city": "New York",
-      "state": "NY",
-      "country": "United States",
-      "venue": "Madison Square Garden",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "9e78b9815554",
       "artist": "Olivia Dean",
