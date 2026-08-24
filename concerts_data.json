@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-08-23T06:31:11Z",
+  "scraped_at": "2026-08-24T06:48:54Z",
   "concerts": [
-    {
-      "id": "9e78b9815554",
-      "artist": "Olivia Dean",
-      "date": "2026-08-18",
-      "city": "New York",
-      "state": "NY",
-      "country": "United States",
-      "venue": "Madison Square Garden",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "f786a49d8b7b",
-      "artist": "Olivia Dean",
-      "date": "2026-08-22",
-      "city": "Atlanta",
-      "state": "GA",
-      "country": "United States",
-      "venue": "State Farm Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "a2416c53d0c0",
       "artist": "Olivia Dean",
