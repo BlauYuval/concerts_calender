@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-08-26T06:38:11Z",
+  "scraped_at": "2026-08-27T17:14:12Z",
   "concerts": [
-    {
-      "id": "a2416c53d0c0",
-      "artist": "Olivia Dean",
-      "date": "2026-08-25",
-      "city": "Houston",
-      "state": "TX",
-      "country": "United States",
-      "venue": "Toyota Center",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "c54757e681b4",
-      "artist": "Couch",
-      "date": "2026-08-26",
-      "city": "South Kingstown",
-      "state": "RI",
-      "country": "United States",
-      "venue": "Ocean Mist",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "fdbe8b879db5",
       "artist": "Olivia Dean",
