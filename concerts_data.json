@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-08-31T12:27:39Z",
+  "scraped_at": "2026-09-01T10:57:32Z",
   "concerts": [
-    {
-      "id": "fdbe8b879db5",
-      "artist": "Olivia Dean",
-      "date": "2026-08-28",
-      "city": "Austin",
-      "state": "TX",
-      "country": "United States",
-      "venue": "Moody Center",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "c261a7ce1bef",
-      "artist": "Olivia Dean",
-      "date": "2026-08-29",
-      "city": "Austin",
-      "state": "TX",
-      "country": "United States",
-      "venue": "Moody Center",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "432c0b516948",
       "artist": "Couch",
@@ -450,6 +430,16 @@
       "country": "D.C",
       "venue": "9:30 Club",
       "source_url": "https://www.sammyrae.com/gigs-hangs"
+    },
+    {
+      "id": "78658b1a10bb",
+      "artist": "Olivia Dean",
+      "date": "2027-01-23",
+      "city": "Mumbai",
+      "state": "IN",
+      "country": "United States",
+      "venue": "Lollapalooza",
+      "source_url": "https://www.oliviadeano.com/#tour"
     }
   ]
 }
