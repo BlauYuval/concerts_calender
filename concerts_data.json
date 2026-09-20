@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-09-19T10:09:25Z",
+  "scraped_at": "2026-09-20T10:27:55Z",
   "concerts": [
-    {
-      "id": "c494220d655f",
-      "artist": "Couch",
-      "date": "2026-09-19",
-      "city": "Camden",
-      "state": "NJ",
-      "country": "United States",
-      "venue": "XPoNential Music Festival",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "09c93e025a94",
       "artist": "Couch",
