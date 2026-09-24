@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-09-23T10:38:09Z",
+  "scraped_at": "2026-09-24T10:57:19Z",
   "concerts": [
     {
       "id": "09c93e025a94",
@@ -10,16 +10,6 @@
       "country": "United States",
       "venue": "Bourbon & Beyond",
       "source_url": "https://www.couchtheband.com/tour"
-    },
-    {
-      "id": "793548ce99c0",
-      "artist": "Olivia Dean",
-      "date": "2026-09-27",
-      "city": "Santa Monica",
-      "state": null,
-      "country": "Unknown",
-      "venue": "Ocean's Way Festival",
-      "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
       "id": "8f0aac45d91a",
