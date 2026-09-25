@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-09-24T10:57:19Z",
+  "scraped_at": "2026-09-25T10:58:36Z",
   "concerts": [
-    {
-      "id": "09c93e025a94",
-      "artist": "Couch",
-      "date": "2026-09-24",
-      "city": "Louisville",
-      "state": "KY",
-      "country": "United States",
-      "venue": "Bourbon & Beyond",
-      "source_url": "https://www.couchtheband.com/tour"
-    },
     {
       "id": "8f0aac45d91a",
       "artist": "Sammy Rae & The Friends",
