@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-01T12:16:01Z",
+  "scraped_at": "2026-10-02T11:45:02Z",
   "concerts": [
-    {
-      "id": "8f0aac45d91a",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-01",
-      "city": "Santa Fe",
-      "state": "NM",
-      "country": "United States",
-      "venue": "The Bridge at Santa Fe Brewing Co.",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "a914d405a2b2",
       "artist": "Sammy Rae & The Friends",
