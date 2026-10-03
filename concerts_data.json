@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-02T11:45:02Z",
+  "scraped_at": "2026-10-03T10:58:29Z",
   "concerts": [
-    {
-      "id": "a914d405a2b2",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-02",
-      "city": "Phoenix",
-      "state": "AZ",
-      "country": "United States",
-      "venue": "The Van Buren",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "1cc2d8b6f69f",
       "artist": "Sammy Rae & The Friends",
