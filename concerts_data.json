@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-03T10:58:29Z",
+  "scraped_at": "2026-10-04T11:40:48Z",
   "concerts": [
-    {
-      "id": "1cc2d8b6f69f",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-03",
-      "city": "Del Mar",
-      "state": null,
-      "country": "Canada",
-      "venue": "The Sound at Del Mar",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "5d9a70a40c86",
       "artist": "Sammy Rae & The Friends",
