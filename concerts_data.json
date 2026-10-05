@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-04T11:40:48Z",
+  "scraped_at": "2026-10-05T13:21:47Z",
   "concerts": [
-    {
-      "id": "5d9a70a40c86",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-04",
-      "city": "Los Angeles",
-      "state": "CA",
-      "country": "United States",
-      "venue": "The Wiltern",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "f8ce3ed29b05",
       "artist": "Olivia Dean",
