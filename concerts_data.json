@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-10-06T12:36:46Z",
+  "scraped_at": "2026-10-07T12:29:55Z",
   "concerts": [
-    {
-      "id": "f8ce3ed29b05",
-      "artist": "Olivia Dean",
-      "date": "2026-10-05",
-      "city": "Melbourne",
-      "state": null,
-      "country": "Australia",
-      "venue": "Rod Laver Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "c343d0cbcd2f",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-06",
-      "city": "San Francisco",
-      "state": "CA",
-      "country": "United States",
-      "venue": "The Castro Theatre",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "8442544e37bd",
       "artist": "Olivia Dean",
