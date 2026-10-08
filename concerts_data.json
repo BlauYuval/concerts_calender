@@ -1,26 +1,6 @@
 {
-  "scraped_at": "2026-10-07T12:29:55Z",
+  "scraped_at": "2026-10-08T12:39:25Z",
   "concerts": [
-    {
-      "id": "8442544e37bd",
-      "artist": "Olivia Dean",
-      "date": "2026-10-06",
-      "city": "Melbourne",
-      "state": null,
-      "country": "Australia",
-      "venue": "Rod Laver Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "2b9cdc8033e6",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-07",
-      "city": "San Francisco",
-      "state": "CA",
-      "country": "United States",
-      "venue": "The Castro Theatre",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "cb71efad3a2a",
       "artist": "Sammy Rae & The Friends",
@@ -330,6 +310,36 @@
       "country": "D.C",
       "venue": "9:30 Club",
       "source_url": "https://www.sammyrae.com/gigs-hangs"
+    },
+    {
+      "id": "6da006bacf4a",
+      "artist": "Olivia Dean",
+      "date": "2027-01-14",
+      "city": "Manila",
+      "state": null,
+      "country": "PH",
+      "venue": "Lalala",
+      "source_url": "https://www.oliviadeano.com/#tour"
+    },
+    {
+      "id": "04b357045469",
+      "artist": "Olivia Dean",
+      "date": "2027-01-17",
+      "city": "Jakarta",
+      "state": "ID",
+      "country": "United States",
+      "venue": "Lalala",
+      "source_url": "https://www.oliviadeano.com/#tour"
+    },
+    {
+      "id": "2ce124896595",
+      "artist": "Olivia Dean",
+      "date": "2027-01-20",
+      "city": "Bangkok",
+      "state": null,
+      "country": "TH",
+      "venue": "Lalala",
+      "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
       "id": "98f530a6db8d",
