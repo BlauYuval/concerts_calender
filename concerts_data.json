@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-09T12:26:55Z",
+  "scraped_at": "2026-10-10T11:45:29Z",
   "concerts": [
-    {
-      "id": "cb71efad3a2a",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-09",
-      "city": "Portland",
-      "state": "OR",
-      "country": "United States",
-      "venue": "McMenamins Crystal Ballroom",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "1aa3e67dcc5d",
       "artist": "Olivia Dean",
