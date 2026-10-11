@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-10T11:45:29Z",
+  "scraped_at": "2026-10-11T11:58:20Z",
   "concerts": [
     {
       "id": "1aa3e67dcc5d",
@@ -10,16 +10,6 @@
       "country": "Australia",
       "venue": "Afterpay Arena",
       "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "2c96bdd1df61",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-10",
-      "city": "Seattle",
-      "state": "WA",
-      "country": "United States",
-      "venue": "Showbox SoDo",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
     },
     {
       "id": "d917a219849b",
