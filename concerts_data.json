@@ -1,36 +1,6 @@
 {
-  "scraped_at": "2026-10-11T11:58:20Z",
+  "scraped_at": "2026-10-12T14:17:29Z",
   "concerts": [
-    {
-      "id": "1aa3e67dcc5d",
-      "artist": "Olivia Dean",
-      "date": "2026-10-09",
-      "city": "Sydney",
-      "state": null,
-      "country": "Australia",
-      "venue": "Afterpay Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "d917a219849b",
-      "artist": "Olivia Dean",
-      "date": "2026-10-10",
-      "city": "Sydney",
-      "state": null,
-      "country": "Australia",
-      "venue": "Afterpay Arena",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "62aea5425574",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-11",
-      "city": "Seattle",
-      "state": "WA",
-      "country": "United States",
-      "venue": "Showbox SoDo",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "6997b0943526",
       "artist": "Sammy Rae & The Friends",
