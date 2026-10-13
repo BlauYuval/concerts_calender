@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-12T14:17:29Z",
+  "scraped_at": "2026-10-13T13:22:17Z",
   "concerts": [
     {
       "id": "6997b0943526",
@@ -10,16 +10,6 @@
       "country": "Canada",
       "venue": "Commodore Ballroom",
       "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
-    {
-      "id": "a02dabd2f25b",
-      "artist": "Olivia Dean",
-      "date": "2026-10-13",
-      "city": "Brisbane",
-      "state": null,
-      "country": "Australia",
-      "venue": "Brisbane Entertainment Centre",
-      "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
       "id": "2a911ee16033",
