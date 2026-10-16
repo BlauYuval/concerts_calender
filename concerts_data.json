@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-15T10:43:58Z",
+  "scraped_at": "2026-10-16T10:31:07Z",
   "concerts": [
-    {
-      "id": "2a911ee16033",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-15",
-      "city": "Boise",
-      "state": "ID",
-      "country": "United States",
-      "venue": "Treefort Music Hall",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "a12308c2df13",
       "artist": "Sammy Rae & The Friends",
