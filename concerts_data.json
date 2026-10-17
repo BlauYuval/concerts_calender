@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-16T10:31:07Z",
+  "scraped_at": "2026-10-17T10:01:07Z",
   "concerts": [
-    {
-      "id": "a12308c2df13",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-16",
-      "city": "Salt Lake City",
-      "state": "UT",
-      "country": "United States",
-      "venue": "The Depot",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "5d47b98758bb",
       "artist": "Sammy Rae & The Friends",
