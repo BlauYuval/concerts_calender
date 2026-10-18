@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-17T10:01:07Z",
+  "scraped_at": "2026-10-18T10:14:19Z",
   "concerts": [
-    {
-      "id": "5d47b98758bb",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-17",
-      "city": "Denver",
-      "state": "CO",
-      "country": "United States",
-      "venue": "Ogden Theatre",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "0edf90e4ccdd",
       "artist": "Olivia Dean",
