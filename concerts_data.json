@@ -1,5 +1,5 @@
 {
-  "scraped_at": "2026-10-18T10:14:19Z",
+  "scraped_at": "2026-10-19T11:51:47Z",
   "concerts": [
     {
       "id": "0edf90e4ccdd",
@@ -10,16 +10,6 @@
       "country": "New Zealand",
       "venue": "Western Springs Bowl",
       "source_url": "https://www.oliviadeano.com/#tour"
-    },
-    {
-      "id": "def59afdee31",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-18",
-      "city": "Boulder",
-      "state": "CO",
-      "country": "United States",
-      "venue": "Boulder Theater",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
     },
     {
       "id": "94b28c23f07e",
