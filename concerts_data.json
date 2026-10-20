@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-19T11:51:47Z",
+  "scraped_at": "2026-10-20T10:48:58Z",
   "concerts": [
-    {
-      "id": "0edf90e4ccdd",
-      "artist": "Olivia Dean",
-      "date": "2026-10-17",
-      "city": "Auckland",
-      "state": null,
-      "country": "New Zealand",
-      "venue": "Western Springs Bowl",
-      "source_url": "https://www.oliviadeano.com/#tour"
-    },
     {
       "id": "94b28c23f07e",
       "artist": "Sammy Rae & The Friends",
@@ -200,6 +190,16 @@
       "country": "D.C",
       "venue": "9:30 Club",
       "source_url": "https://www.sammyrae.com/gigs-hangs"
+    },
+    {
+      "id": "ba102c3a5c16",
+      "artist": "Olivia Dean",
+      "date": "2026-11-18",
+      "city": "London",
+      "state": null,
+      "country": "United Kingdom",
+      "venue": "Love, You Make It",
+      "source_url": "https://www.oliviadeano.com/#tour"
     },
     {
       "id": "6da006bacf4a",
