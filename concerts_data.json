@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-20T10:48:58Z",
+  "scraped_at": "2026-10-21T11:00:59Z",
   "concerts": [
-    {
-      "id": "94b28c23f07e",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-20",
-      "city": "Kansas City",
-      "state": "MO",
-      "country": "United States",
-      "venue": "The Truman",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "8cf886ec8196",
       "artist": "Sammy Rae & The Friends",
