@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-22T11:00:08Z",
+  "scraped_at": "2026-10-23T10:53:48Z",
   "concerts": [
-    {
-      "id": "8cf886ec8196",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-22",
-      "city": "Saint Paul",
-      "state": "MN",
-      "country": "United States",
-      "venue": "Palace Theatre",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "3e64957bea67",
       "artist": "Sammy Rae & The Friends",
