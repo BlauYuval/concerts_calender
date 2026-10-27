@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-26T12:06:40Z",
+  "scraped_at": "2026-10-27T11:27:03Z",
   "concerts": [
-    {
-      "id": "9b8eb46f0972",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-26",
-      "city": "St Louis",
-      "state": "MO",
-      "country": "United States",
-      "venue": "The Pageant",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "28d5eb4059f2",
       "artist": "Sammy Rae & The Friends",
