@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-27T11:27:03Z",
+  "scraped_at": "2026-10-28T11:58:47Z",
   "concerts": [
-    {
-      "id": "28d5eb4059f2",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-27",
-      "city": "Cincinnati",
-      "state": "OH",
-      "country": "United States",
-      "venue": "Bogart's",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "fd6b38ba13e0",
       "artist": "Sammy Rae & The Friends",
@@ -429,6 +419,16 @@
       "state": null,
       "country": "United Kingdom",
       "venue": "O2 Forum Kentish Town",
+      "source_url": "https://www.sammyrae.com/gigs-hangs"
+    },
+    {
+      "id": "d978e241b4dc",
+      "artist": "Sammy Rae & The Friends",
+      "date": "2027-06-18",
+      "city": "Missoula",
+      "state": "MT",
+      "country": "United States",
+      "venue": "Zootown Festival",
       "source_url": "https://www.sammyrae.com/gigs-hangs"
     }
   ]
