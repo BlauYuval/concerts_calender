@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-28T11:58:47Z",
+  "scraped_at": "2026-10-29T12:08:22Z",
   "concerts": [
-    {
-      "id": "fd6b38ba13e0",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-28",
-      "city": "Pittsburgh",
-      "state": "PA",
-      "country": "United States",
-      "venue": "Stage AE",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "558ce627de42",
       "artist": "Sammy Rae & The Friends",
