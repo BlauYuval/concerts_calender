@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-30T12:00:04Z",
+  "scraped_at": "2026-10-31T11:34:00Z",
   "concerts": [
-    {
-      "id": "558ce627de42",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-30",
-      "city": "Atlanta",
-      "state": "GA",
-      "country": "United States",
-      "venue": "The Eastern",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "7d2601562327",
       "artist": "Sammy Rae & The Friends",
