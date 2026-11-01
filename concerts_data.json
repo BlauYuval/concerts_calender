@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-10-31T11:34:00Z",
+  "scraped_at": "2026-11-01T12:31:59Z",
   "concerts": [
-    {
-      "id": "7d2601562327",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-10-31",
-      "city": "Charlotte",
-      "state": "NC",
-      "country": "United States",
-      "venue": "The Fillmore Charlotte",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "d6ee72a206d3",
       "artist": "Sammy Rae & The Friends",
