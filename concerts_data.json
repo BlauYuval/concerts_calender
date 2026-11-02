@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-01T12:31:59Z",
+  "scraped_at": "2026-11-02T14:32:20Z",
   "concerts": [
-    {
-      "id": "d6ee72a206d3",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-01",
-      "city": "Raleigh",
-      "state": "NC",
-      "country": "United States",
-      "venue": "The Ritz",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "0b6c8b87c1e4",
       "artist": "Sammy Rae & The Friends",
