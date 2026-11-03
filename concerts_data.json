@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-02T14:32:20Z",
+  "scraped_at": "2026-11-03T13:28:37Z",
   "concerts": [
-    {
-      "id": "0b6c8b87c1e4",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-02",
-      "city": "Richmond",
-      "state": "VA",
-      "country": "United States",
-      "venue": "The National",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "8ba06b05bf5b",
       "artist": "Sammy Rae & The Friends",
