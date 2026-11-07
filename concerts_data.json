@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-06T13:38:00Z",
+  "scraped_at": "2026-11-07T12:17:37Z",
   "concerts": [
-    {
-      "id": "40f25aba637a",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-06",
-      "city": "New York",
-      "state": "NY",
-      "country": "United States",
-      "venue": "Brooklyn Paramount",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "3e39cf991a32",
       "artist": "Sammy Rae & The Friends",
