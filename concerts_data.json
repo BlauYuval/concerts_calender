@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-07T12:17:37Z",
+  "scraped_at": "2026-11-08T12:38:24Z",
   "concerts": [
-    {
-      "id": "3e39cf991a32",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-07",
-      "city": "Boston",
-      "state": "MA",
-      "country": "United States",
-      "venue": "MGM Music Hall at Fenway",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "9f3f3c254ce6",
       "artist": "Sammy Rae & The Friends",
