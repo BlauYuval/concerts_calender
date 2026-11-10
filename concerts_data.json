@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-09T14:56:05Z",
+  "scraped_at": "2026-11-10T14:08:52Z",
   "concerts": [
-    {
-      "id": "9f3f3c254ce6",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-09",
-      "city": "Ithaca",
-      "state": "NY",
-      "country": "United States",
-      "venue": "State Theater of Ithaca",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "d133010b5c9a",
       "artist": "Sammy Rae & The Friends",
