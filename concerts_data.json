@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-10T14:08:52Z",
+  "scraped_at": "2026-11-11T13:25:13Z",
   "concerts": [
-    {
-      "id": "d133010b5c9a",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-10",
-      "city": "Toronto",
-      "state": "ON",
-      "country": "Canada",
-      "venue": "The Concert Hall",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "d3ba55af2086",
       "artist": "Sammy Rae & The Friends",
