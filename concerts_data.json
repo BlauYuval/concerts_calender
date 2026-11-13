@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-12T14:29:50Z",
+  "scraped_at": "2026-11-13T13:47:26Z",
   "concerts": [
-    {
-      "id": "d3ba55af2086",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-12",
-      "city": "Washington",
-      "state": null,
-      "country": "D.C",
-      "venue": "9:30 Club",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "4232239a13ca",
       "artist": "Sammy Rae & The Friends",
