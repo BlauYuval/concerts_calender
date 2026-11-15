@@ -1,16 +1,6 @@
 {
-  "scraped_at": "2026-11-14T12:51:49Z",
+  "scraped_at": "2026-11-15T13:18:46Z",
   "concerts": [
-    {
-      "id": "9046a95e4fd3",
-      "artist": "Sammy Rae & The Friends",
-      "date": "2026-11-14",
-      "city": "Washington",
-      "state": null,
-      "country": "D.C",
-      "venue": "9:30 Club",
-      "source_url": "https://www.sammyrae.com/gigs-hangs"
-    },
     {
       "id": "ba102c3a5c16",
       "artist": "Olivia Dean",
